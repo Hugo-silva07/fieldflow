@@ -1,0 +1,17 @@
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.views import APIView
+
+from accounts.serializers import MeSerializer
+
+
+class MeAPIView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        serializer = MeSerializer(request.user)
+
+        return Response({
+            "success": True,
+            "data": serializer.data,
+        })

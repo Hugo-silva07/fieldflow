@@ -216,3 +216,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Database
+db.sqlite3
+
+# Environment variables
+.env
+.env.local
+
+# Next.js
+.next/
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
